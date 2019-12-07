@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Grid Layout</h1>
+				</section>
+				<section>
+					<h2>Plan</h2>
+					<p class="fragment">What's a Grid?</p>
+					<p class="fragment">Grid functions</p>
+					<p class="fragment">Grid container</p>
+					<p class="fragment">Unit of measurement fr</p>
+				</section>
+				<section>
+					<h2>What's a Grid?</h2>
+				</section>
+				<section>
+					<h2>Grid functions</h2>
+					<ul>
+						<li>Fixed and flexible strip dimensions
+							</li>
+						<li>Element Location</li>
+						<li>Creating additional bandwidth for content storage</li>
+						<li>Alignment control</li>
+						<li>Overlapping content management</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Grid container</h2>
+						<pre>
+							<code class="hljs" data-trim >
+								<div class="wrapper">
+									<div>One</div>
+									<div>Two</div>
+									<div>Three</div>
+									<div>Four</div>
+									<div>Five</div>
+								</div>
+							</code>
+						</pre>
+						<pre>
+							<code class="hljs" data-trim>
+								.wrapper {
+									display: grid;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Grid Tracks</h2>
+						
+						<img data-src="grid3x4.png" width="40%" >
+						<pre>
+							<code class="hljs" data-trim data-line-numbers="3,4">
+								.wrapper {
+									display: grid;
+									grid-template-columns: 200px 200px 200px;
+									grid-template-rows: 200px 200px;
+									grid-gap: 10px;
+									}
+							</code>
+						</pre>
+						
+					</section>
+				</section>
+				<section>
+						<h2>Unit of measurement fr</h2>
+					<p>The new length unit fr represents a fraction of the available space in the grid container</p>
+				</section>
+				<section>
+						<h2>Thank you for your attention</h2>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
